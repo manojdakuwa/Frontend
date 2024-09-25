@@ -1,4 +1,4 @@
-body {
+/* body {
     font-family: sans-serif;
 }
 
@@ -34,4 +34,74 @@ th, td {
 th {
     text-align: left;
     cursor: pointer;
+} */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 100%;
+    padding: 20px;
+}
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.toolbar button {
+    padding: 8px 12px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+/* .table {
+    width: 100%;
+    table-layout: fixed;
+    min-width: 600px;
+} */
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+    border: 1px solid #ddd;
+}
+
+/* .table th, .table td {
+    white-space: nowrap;
+} */
+.table th, .table td, .table td input {
+    padding: 3px;
+    border: 1px solid #ddd;
+    text-align: center;
+    white-space: nowrap; /* Prevents text wrapping within cells */
+    overflow: hidden; /* Hides overflowing text */
+    text-overflow: ellipsis; /* Adds ellipsis for truncated text */
+    max-width: 200px; /* Adjust the maximum width as needed */
+}
+.table th {
+    background-color: #f2f2f2;
+}
+
+.table tr:nth-child(even) {
+    background-color:   
+ #f9f9f9;
+}
+/* Additional responsive styles */
+@media (max-width: 768px) {
+    .table {
+        font-size: 0.8rem;
+    }
 }
